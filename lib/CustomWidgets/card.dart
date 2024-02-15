@@ -21,7 +21,7 @@ Widget card(double width, double height, color, String text, img) {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Image.asset(img,width: 80,height: 80,),
+            child: Image.asset(img,width: 64,height: 64,),
           )
         ],
       ),
