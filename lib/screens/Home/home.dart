@@ -3,14 +3,14 @@ import 'package:ifood/CustomWidgets/slide.dart';
 import 'package:ifood/CustomWidgets/styles.dart';
 import 'package:flutter/material.dart';
 
-class TelaInicio extends StatefulWidget {
-  const TelaInicio({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
   @override
-  State<TelaInicio> createState() => _TelaInicioState();
+  State<Home> createState() => _HomeState();
 }
 
-class _TelaInicioState extends State<TelaInicio> {
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

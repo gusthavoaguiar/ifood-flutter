@@ -15,23 +15,19 @@ class _SlideState extends State<Slide> {
   @override
   void initState() {
     super.initState();
-    automatic();
+    nextPage();
   }
-  automatic(){
-    Timer.periodic(Duration(seconds: 2), (timer) { 
+  nextPage(){
+    Timer.periodic(Duration(seconds: 3), (timer) {
       int page = pageController.page!.round() + 1;
-      setState(() {
-        currentPage = page;
-      });
-      if(currentPage >= 3){
-        page = 0;
+      if (page >= 3){
+        pageController.animateToPage(0, duration: Duration(seconds: 2), curve: Curves.easeIn);
+      } else {
+        pageController.nextPage(duration: Duration(seconds: 2), curve: Curves.easeIn);
       }
-      pageController.animateToPage(
-        page,
-        duration: Duration(seconds: 2), 
-        curve: Curves.easeOut);
-    });
+     });
   }
+  
   @override
   Widget build(BuildContext context) {
     
@@ -43,11 +39,12 @@ class _SlideState extends State<Slide> {
         borderRadius: BorderRadius.circular(8)
       ),
       child: PageView(
+        controller: pageController,
         children: [
           Container(
             width: double.infinity,
             height: 200,
-            color: Colors.red,
+            color: Colors.orange,
             ),
             Container(
             width: double.infinity,
@@ -57,7 +54,7 @@ class _SlideState extends State<Slide> {
             Container(
             width: double.infinity,
             height: 200,
-            color: Colors.green,
+            color: Colors.purple,
             ),
         ],
       ),

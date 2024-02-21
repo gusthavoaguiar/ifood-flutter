@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ifood/CustomWidgets/menuinferior.dart';
+import 'package:ifood/screens/Home/home.dart';
 import 'package:ifood/screens/Profile/profilescreen.dart';
 import 'package:ifood/screens/Search/search.dart';
 
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   }
   //lista de paginas
   List<Widget> telas = const [
-    Text('Home'),
+    Home(),
     SearchScreen(),
     Text('Cart'),
     ProfileScreen()
