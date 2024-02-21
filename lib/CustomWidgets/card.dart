@@ -28,3 +28,32 @@ Widget card(double width, double height, color, String text, img) {
     ),
   );
 }
+
+Container secondCard(double width, double height, Color? color, String text,String img){
+  return Container(
+    margin: const EdgeInsets.fromLTRB(4, 8, 0, 0),
+    width: width,
+    height: height,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(8),
+    ),
+    child: Card(
+      color: color,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset(img, width: 32, height: 32),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(text, style: textNunito300(14)),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
