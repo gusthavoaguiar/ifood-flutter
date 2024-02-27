@@ -3,6 +3,7 @@ import 'package:ifood/CustomWidgets/menuinferior.dart';
 import 'package:ifood/screens/Home/home.dart';
 import 'package:ifood/screens/Profile/profilescreen.dart';
 import 'package:ifood/screens/Search/search.dart';
+import 'package:ifood/screens/cart/cart.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,7 +25,7 @@ class _HomePageState extends State<HomePage> {
   List<Widget> telas = const [
     Home(),
     SearchScreen(),
-    Text('Cart'),
+    Cart(),
     ProfileScreen()
   ];
 
