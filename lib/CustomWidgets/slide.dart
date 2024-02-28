@@ -188,12 +188,12 @@ class _SlideState extends State<Slide> {
 //   }
 
 //   //método para resetar a animação
-//   void reset() {
-//     for (int i = 0; i < qtdPaginas; i++) {
-//       progresso[i] = 0.0;
-//     }
-//     iniciarProgresso();
-//   }
+  // void reset() {
+  //   for (int i = 0; i < qtdPaginas; i++) {
+  //     progresso[i] = 0.0;
+  //   }
+  //   iniciarProgresso();
+  // }
 
 //   //método para criar o indicator
 //   List<Widget> buildIndicator() {

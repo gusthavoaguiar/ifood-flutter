@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ifood/CustomWidgets/circleWidget.dart';
 import 'package:ifood/CustomWidgets/styles.dart';
 
 Widget card(double width, double height, color, String text, img) {
@@ -21,7 +22,11 @@ Widget card(double width, double height, color, String text, img) {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Image.asset(img,width: 64,height: 64,),
+            child: Image.asset(
+              img,
+              width: 64,
+              height: 64,
+            ),
           )
         ],
       ),
@@ -29,7 +34,8 @@ Widget card(double width, double height, color, String text, img) {
   );
 }
 
-Container secondCard(double width, double height, Color? color, String text,String img){
+Container secondCard(
+    double width, double height, Color? color, String text, String img) {
   return Container(
     margin: const EdgeInsets.fromLTRB(4, 8, 0, 0),
     width: width,
@@ -57,3 +63,22 @@ Container secondCard(double width, double height, Color? color, String text,Stri
   );
 }
 
+Container foodCard(String text, String url, String imgAvatar, String text) {
+  return Container(
+    margin: const EdgeInsets.all(8),
+    width: 180,
+    height: 200,
+    color: Colors.deepPurple,
+    decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
+    child: Column(
+      children: [
+        Container(
+          child: circleAvatar(imgAvatar),
+          decoration:
+              BoxDecoration(image: DecorationImage(image: NetworkImage(url))),
+        )
+        Text(text)
+      ],
+    ),
+  );
+}

@@ -1,3 +1,4 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ifood/CustomWidgets/card.dart';
 import 'package:ifood/CustomWidgets/slide.dart';
 import 'package:ifood/CustomWidgets/styles.dart';
@@ -30,8 +31,8 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                card(190, 80, Colors.deepPurple, "Pet", "assets/pet.png"),
-                card(190, 80,  Colors.deepPurple, "Mercado", "assets/mercado.png"),
+                card(190, 80, Colors.deepPurple[50], "Pet", "assets/pet.png"),
+                card(190, 80,  Colors.deepPurple[50], "Mercado", "assets/mercado.png"),
               ],
             ),
           ),
@@ -41,13 +42,23 @@ class _HomeState extends State<Home> {
               children: [
                 secondCard(90, 100, Colors.deepPurple[50], "Farmácia", "assets/farmacia.png"),
                 secondCard(90, 100, Colors.deepPurple[50], "Bebidas", "assets/bebidas.png"),
-                const SizedBox(width: 10),
                 secondCard(90, 100, Colors.deepPurple[50], "Sucos", "assets/sucos.png"),
-                secondCard(90, 100, Colors.deepPurple[50], "Pizza", "assets/pizza.png"),
+                secondCard(90, 100, Colors.deepPurple[50], "Ver mais", "assets/redplus.png"),
               ],
             ),
           ),
           Slide(),
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(children: [Text("Tudo a partir de R\$0,99!", style: GoogleFonts.nunitoSans(fontSize: 16, fontWeight: FontWeight.w700),),Spacer(), Text("Ver mais", style: GoogleFonts.nunitoSans(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.red),)]),
+          ),
+          Padding(padding: const EdgeInsets.all(8),
+          child: Row(
+            children: [
+              
+            ],
+          ),
+          )
         ],
       ),
     );
