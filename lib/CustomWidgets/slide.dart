@@ -94,7 +94,7 @@ class _SlideState extends State<Slide> {
     return Container(
       margin: const EdgeInsets.all(14),
       width: double.infinity,
-      height: 200,
+      height: 300,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
       child: Stack(
         alignment: AlignmentDirectional.bottomCenter,
@@ -104,17 +104,17 @@ class _SlideState extends State<Slide> {
             children: [
               Container(
                 width: double.infinity,
-                height: 200,
-                color: Colors.red,
+                height: 300,
+                child: Image(image: NetworkImage("https://scontent.fcgh39-1.fna.fbcdn.net/v/t1.6435-9/107672055_3276130729074026_3153820493278039029_n.jpg?stp=cp0_dst-jpg_e15_p320x320_q65&_nc_cat=101&ccb=1-7&_nc_sid=3c63d6&_nc_ohc=f9zOkceXJSsAX8c2AMk&_nc_ht=scontent.fcgh39-1.fna&oh=00_AfCh3G7CUXHQhmERTC-v2aRBsqSgiRYxoBvvL4bOKU8Wjw&oe=66077EAC"))
               ),
               Container(
                 width: double.infinity,
-                height: 200,
+                height: 300,
                 color: Colors.black,
               ),
               Container(
                 width: double.infinity,
-                height: 200,
+                height: 300,
                 color: Colors.green,
               ),
             ],

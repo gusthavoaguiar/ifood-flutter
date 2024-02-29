@@ -20,7 +20,7 @@ Widget spaceH(space){
 }
 
 Widget spaceV(space){
-  return SizedBox(width: space);
+  return SizedBox(height: space);
 }
 
 TextStyle textNunito300(double size){
@@ -35,4 +35,9 @@ TextStyle textNunitoBold(double size){
     fontSize: size,
     fontWeight: FontWeight.w700,
   );
+}
+
+TextStyle textNunitoWhiteBold(double size) {
+  return GoogleFonts.nunitoSans(
+      color: Colors.white, fontSize: size, fontWeight: FontWeight.bold);
 }

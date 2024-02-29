@@ -14,7 +14,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text('R. Ari Barroso, 330', style: textNunitoBold(14)),
         centerTitle: true,
@@ -26,13 +26,16 @@ class _HomeState extends State<Home> {
         ],
       ),
       body: ListView(
+        scrollDirection: Axis.vertical,
+        shrinkWrap: true,
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                card(190, 80, Colors.deepPurple[50], "Pet", "assets/pet.png"),
-                card(190, 80,  Colors.deepPurple[50], "Mercado", "assets/mercado.png"),
+                card(198, 80, Colors.deepPurple[50], "Pet", "assets/pet.png"),
+                card(198, 80, Colors.deepPurple[50], "Mercado",
+                    "assets/mercado.png"),
               ],
             ),
           ),
@@ -40,25 +43,59 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                secondCard(90, 100, Colors.deepPurple[50], "Farmácia", "assets/farmacia.png"),
-                secondCard(90, 100, Colors.deepPurple[50], "Bebidas", "assets/bebidas.png"),
-                secondCard(90, 100, Colors.deepPurple[50], "Sucos", "assets/sucos.png"),
-                secondCard(90, 100, Colors.deepPurple[50], "Ver mais", "assets/redplus.png"),
+                secondCard(95, 100, Colors.deepPurple[50], "Farmácia",
+                    "assets/farmacia.png"),
+                secondCard(95, 100, Colors.deepPurple[50], "Bebidas",
+                    "assets/bebidas.png"),
+                secondCard(95, 100, Colors.deepPurple[50], "Sucos",
+                    "assets/sucos.png"),
+                secondCard(95, 100, Colors.deepPurple[50], "Ver mais",
+                    "assets/redplus.png"),
               ],
             ),
           ),
           Slide(),
           Padding(
             padding: const EdgeInsets.all(16),
-            child: Row(children: [Text("Tudo a partir de R\$0,99!", style: GoogleFonts.nunitoSans(fontSize: 16, fontWeight: FontWeight.w700),),Spacer(), Text("Ver mais", style: GoogleFonts.nunitoSans(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.red),)]),
+            child: Row(children: [
+              Text(
+                "Tudo a partir de R\$0,99!",
+                style: GoogleFonts.nunitoSans(
+                    fontSize: 16, fontWeight: FontWeight.w700),
+              ),
+              Spacer(),
+              Text(
+                "Ver mais",
+                style: GoogleFonts.nunitoSans(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.red),
+              )
+            ]),
           ),
-          Padding(padding: const EdgeInsets.all(8),
-          child: Row(
-            children: [
-              
-            ],
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                foodCard(
+                    "https://i0.wp.com/alinemarcio.creativers.com.br/wp-content/uploads/2022/04/hotdog.jpg?fit=900%2C593&ssl=1",
+                    "Dogão Completo",
+                    "R\$7,99",
+                    "15-25 min ● R\$2,00"),
+                foodCard(
+                    "https://i0.wp.com/alinemarcio.creativers.com.br/wp-content/uploads/2022/04/hotdog.jpg?fit=900%2C593&ssl=1",
+                    "Dogão Completo",
+                    "R\$7,99",
+                    "15-25 min ● R\$2,00"),
+                    foodCard(
+                    "https://i0.wp.com/alinemarcio.creativers.com.br/wp-content/uploads/2022/04/hotdog.jpg?fit=900%2C593&ssl=1",
+                    "Dogão Completo",
+                    "R\$7,99",
+                    "15-25 min ● R\$2,00"),
+              ],
+            ),
           ),
-          )
         ],
       ),
     );
